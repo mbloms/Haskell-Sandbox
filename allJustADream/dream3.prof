@@ -1,0 +1,74 @@
+	Mon Nov  7 23:40 2016 Time and Allocation Profiling Report  (Final)
+
+	   dream3 +RTS -p -RTS
+
+	total time  =        0.03 secs   (30 ticks @ 1000 us, 1 processor)
+	total alloc =  27,380,320 bytes  (excludes profiling overheads)
+
+COST CENTRE    MODULE  %time %alloc
+
+main           Main     63.3   22.9
+lookupT        Main     10.0    9.5
+readLine       Main      6.7    8.0
+readLine.(...) Main      3.3    4.2
+showAnswer     Main      3.3    3.1
+process        Main      3.3    2.8
+push           Main      3.3    4.6
+insertT        Main      3.3   25.5
+inserth        Main      3.3    3.7
+readLine.(...) Main      0.0   13.2
+testUntrue     Main      0.0    1.4
+
+
+                                                                   individual     inherited
+COST CENTRE            MODULE                    no.     entries  %time %alloc   %time %alloc
+
+MAIN                   MAIN                       48           0    0.0    0.0   100.0  100.0
+ main                  Main                       97           0   63.3   22.9   100.0   99.8
+  showAnswer           Main                      101        5616    3.3    3.1     3.3    3.1
+  readLine             Main                      100       14028    6.7    8.0    10.0   25.6
+   readInt             Main                      133           0    0.0    0.2     0.0    0.2
+    readInt.\.\        Main                      135        1404    0.0    0.0     0.0    0.0
+    readInt.\          Main                      134        1404    0.0    0.0     0.0    0.0
+   readLine.true       Main                      112        5616    0.0    0.0     0.0    0.0
+   readLine.(...)      Main                      110        5616    3.3    4.2     3.3    4.2
+    readLine.bangstr   Main                      111        8436    0.0    0.0     0.0    0.0
+   readLine.tokens     Main                      109        5616    0.0    0.0     0.0    0.0
+   readLine.(...)      Main                      108        5616    0.0   13.2     0.0   13.2
+   readLine.untrue     Main                      107        5616    0.0    0.0     0.0    0.0
+  filterfunc           Main                       99       14028    0.0    0.0     0.0    0.0
+  process              Main                       98       14029    3.3    2.8    23.3   48.2
+   push                Main                      103        7008    3.3    4.6    10.0   33.8
+    singleton          Main                      116           1    0.0    0.0     0.0    0.0
+    insertT            Main                      114       30654    3.3   25.5     6.7   29.2
+     inserth           Main                      119       29263    3.3    3.7     3.3    3.8
+      singleton        Main                      121        1404    0.0    0.1     0.0    0.1
+     consT             Main                      117       30654    0.0    0.0     0.0    0.0
+     unconsT           Main                      115       30654    0.0    0.0     0.0    0.0
+      singleton        Main                      120          18    0.0    0.0     0.0    0.0
+   testScenario        Main                      102        5616    0.0    0.3    10.0   11.6
+    testScenario.res   Main                      129        2808    0.0    0.1     0.0    0.1
+    testScenario.d     Main                      128        2808    0.0    0.0     0.0    0.0
+    lookupT            Main                      113       30871    3.3    7.4     3.3    7.4
+     unconsT           Main                      118       29465    0.0    0.0     0.0    0.0
+    testScenario.(...) Main                      105        5616    0.0    0.2     6.7    3.8
+     elemIndex'        Main                      124        4212    0.0    0.0     0.0    0.0
+     testUntrue        Main                      106        9828    0.0    1.4     6.7    3.6
+      elemIndex'       Main                      125           0    0.0    0.1     6.7    2.2
+       lookupT         Main                      126        9826    6.7    2.1     6.7    2.1
+        unconsT        Main                      127        8420    0.0    0.0     0.0    0.0
+    testScenario.rest  Main                      104        5616    0.0    0.0     0.0    0.0
+ CAF                   Main                       95           0    0.0    0.0     0.0    0.0
+  yes                  Main                      137           1    0.0    0.0     0.0    0.0
+  readInt              Main                      132           1    0.0    0.0     0.0    0.0
+  justADream           Main                      131           1    0.0    0.0     0.0    0.0
+  showAnswer           Main                      130           0    0.0    0.0     0.0    0.0
+  (...)                Main                      123           1    0.0    0.0     0.0    0.0
+  plotError            Main                      122           1    0.0    0.0     0.0    0.0
+  main                 Main                       96           1    0.0    0.0     0.0    0.0
+ CAF                   Data.ByteString.Char8      93           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Handle.FD           88           0    0.0    0.2     0.0    0.2
+ CAF                   GHC.Conc.Signal            83           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Encoding            80           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Handle.Internals    78           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Encoding.Iconv      73           0    0.0    0.0     0.0    0.0

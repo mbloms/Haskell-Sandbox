@@ -1,0 +1,64 @@
+	Mon Nov  7 19:34 2016 Time and Allocation Profiling Report  (Final)
+
+	   dream2 +RTS -p -RTS
+
+	total time  =        0.04 secs   (38 ticks @ 1000 us, 1 processor)
+	total alloc =  26,265,824 bytes  (excludes profiling overheads)
+
+COST CENTRE     MODULE  %time %alloc
+
+main            Main     60.5   23.9
+lookupT         Main     13.2    9.9
+process         Main      7.9    3.5
+readLine.(...)  Main      5.3   13.8
+push            Main      5.3    4.9
+insertT         Main      5.3   26.5
+showAnswer      Main      2.6    3.2
+readLine        Main      0.0    4.7
+readLine.events Main      0.0    4.9
+inserth         Main      0.0    3.8
+
+
+                                                               individual     inherited
+COST CENTRE        MODULE                    no.     entries  %time %alloc   %time %alloc
+
+MAIN               MAIN                       48           0    0.0    0.0   100.0  100.0
+ main              Main                       97           0   60.5   23.9   100.0   99.8
+  showAnswer       Main                      101        5616    2.6    3.2     2.6    3.2
+  readLine         Main                      100       14028    0.0    4.7     5.3   23.6
+   readInt         Main                      124           0    0.0    0.2     0.0    0.2
+    readInt.\.\    Main                      126        1404    0.0    0.0     0.0    0.0
+    readInt.\      Main                      125        1404    0.0    0.0     0.0    0.0
+   readLine.events Main                      105        5616    0.0    4.9     0.0    4.9
+    readBangEvent  Main                      107        8424    0.0    0.0     0.0    0.0
+   readLine.tokens Main                      104        5616    0.0    0.0     0.0    0.0
+   readLine.(...)  Main                      103        5616    5.3   13.8     5.3   13.8
+  filterfunc       Main                       99       14028    0.0    0.0     0.0    0.0
+  process          Main                       98       14029    7.9    3.5    31.6   49.1
+   length'         Main                      120        1404    0.0    0.0     0.0    0.0
+   push            Main                      106        7008    5.3    4.9    10.5   35.3
+    singleton      Main                      112           1    0.0    0.0     0.0    0.0
+    insertT        Main                      110       30654    5.3   26.5     5.3   30.5
+     inserth       Main                      115       29263    0.0    3.8     0.0    3.9
+      singleton    Main                      117        1404    0.0    0.1     0.0    0.1
+     consT         Main                      113       30654    0.0    0.0     0.0    0.0
+     unconsT       Main                      111       30654    0.0    0.0     0.0    0.0
+      singleton    Main                      116          19    0.0    0.0     0.0    0.0
+   testScenario    Main                      102       11232    0.0    0.2    13.2   10.3
+    elemIndex'     Main                      108        8424    0.0    0.2    13.2   10.1
+     lookupT       Main                      109       40699   13.2    9.9    13.2    9.9
+      unconsT      Main                      114       37887    0.0    0.0     0.0    0.0
+ CAF               Main                       95           0    0.0    0.0     0.0    0.0
+  yes              Main                      128           1    0.0    0.0     0.0    0.0
+  readInt          Main                      123           1    0.0    0.0     0.0    0.0
+  justADream       Main                      122           1    0.0    0.0     0.0    0.0
+  showAnswer       Main                      121           0    0.0    0.0     0.0    0.0
+  (...)            Main                      119           1    0.0    0.0     0.0    0.0
+  plotError        Main                      118           1    0.0    0.0     0.0    0.0
+  main             Main                       96           1    0.0    0.0     0.0    0.0
+ CAF               Data.ByteString.Char8      93           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Handle.FD           88           0    0.0    0.2     0.0    0.2
+ CAF               GHC.Conc.Signal            82           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Encoding            79           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Handle.Internals    77           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Encoding.Iconv      73           0    0.0    0.0     0.0    0.0

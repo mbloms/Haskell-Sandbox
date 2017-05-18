@@ -1,0 +1,49 @@
+	Sat Nov  5 12:57 2016 Time and Allocation Profiling Report  (Final)
+
+	   dream +RTS -p -RTS
+
+	total time  =        0.11 secs   (111 ticks @ 1000 us, 1 processor)
+	total alloc =  14,771,472 bytes  (excludes profiling overheads)
+
+COST CENTRE     MODULE  %time %alloc
+
+testScenario    Main     72.1    3.6
+main            Main     21.6   42.5
+process         Main      4.5    5.9
+showAnswer      Main      0.9    5.7
+readLine        Main      0.0    8.4
+readLine.events Main      0.0    8.7
+readLine.(...)  Main      0.0   24.5
+
+
+                                                               individual     inherited
+COST CENTRE        MODULE                    no.     entries  %time %alloc   %time %alloc
+
+MAIN               MAIN                       48           0    0.0    0.0   100.0  100.0
+ main              Main                       97           0   21.6   42.5   100.0   99.6
+  showAnswer       Main                      101        5616    0.9    5.7     0.9    5.7
+  readLine         Main                      100       14028    0.0    8.4     0.0   41.9
+   readInt         Main                      112           0    0.0    0.3     0.0    0.3
+    readInt.\.\    Main                      114        1404    0.0    0.0     0.0    0.0
+    readInt.\      Main                      113        1404    0.0    0.0     0.0    0.0
+   readLine.events Main                      105        5616    0.0    8.7     0.0    8.7
+    readBangEvent  Main                      106        8424    0.0    0.0     0.0    0.0
+   readLine.tokens Main                      104        5616    0.0    0.0     0.0    0.0
+   readLine.(...)  Main                      103        5616    0.0   24.5     0.0   24.5
+  filterfunc       Main                       99       14028    0.9    0.0     0.9    0.0
+  process          Main                       98       14029    4.5    5.9    76.6    9.5
+   testScenario    Main                      102       11232   72.1    3.6    72.1    3.6
+ CAF               Main                       95           0    0.0    0.0     0.0    0.0
+  yes              Main                      116           1    0.0    0.0     0.0    0.0
+  readInt          Main                      111           1    0.0    0.0     0.0    0.0
+  justADream       Main                      110           1    0.0    0.0     0.0    0.0
+  showAnswer       Main                      109           0    0.0    0.0     0.0    0.0
+  (...)            Main                      108           1    0.0    0.0     0.0    0.0
+  plotError        Main                      107           1    0.0    0.0     0.0    0.0
+  main             Main                       96           1    0.0    0.0     0.0    0.0
+ CAF               Data.ByteString.Char8      93           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Handle.FD           88           0    0.0    0.4     0.0    0.4
+ CAF               GHC.Conc.Signal            82           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Encoding            79           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Handle.Internals    77           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Encoding.Iconv      73           0    0.0    0.0     0.0    0.0
